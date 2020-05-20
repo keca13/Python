@@ -1,0 +1,27 @@
+CREATE TABLE IF NOT EXISTS "portin"
+(
+    [id_portin] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [number] INTEGER NOT NULL,
+    [email] NVARCHAR(160)  NOT NULL,
+    [plicbd] INTEGER NOT NULL,
+    [status] INTEGER NOT NULL,
+    [id_operator] INTEGER NOT NULL,
+    [it_date] DATETIME NOT NULL,
+    [port_date] DATETIME NOT NULL,
+    [priority] INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS "portout"
+(
+    [id_portout] INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    [number] INTEGER NOT NULL,
+    [email] NVARCHAR(160)  NOT NULL,
+    [plicbd] INTEGER NOT NULL,
+    [status] INTEGER NOT NULL,
+    [id_operator] INTEGER NOT NULL,
+    [it_date] DATETIME NOT NULL,
+    [portout_date] DATETIME NOT NULL,
+    [priority] INTEGER NOT NULL,
+    FOREIGN KEY ([id_portout]) REFERENCES "portin" ([id_portin]) 
+		ON DELETE NO ACTION ON UPDATE NO ACTION
+);
