@@ -4,6 +4,9 @@ import pdfkit as pdf
 import pandas as pd
 import bbb2
 
+
+#from csv to html and pdf
+
 bbb2.openfile()
 
 OUTFILE_PDF = "bbb.pdf"
