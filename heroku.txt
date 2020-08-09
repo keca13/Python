@@ -1,0 +1,33 @@
+https://www.heroku.com/python
+
+
+mkdir hello-world cd hello-world
+
+python -m venv ll_env
+.\ll_env\Scripts\activate.bat
+.\ll_env\Scripts\activate.ps1
+
+pip install requests[security]
+pip install flask
+pip install gunicorn
+pip freeze > requirements.txt
+
+touch/ni hello.py Procfile
+
+.\hello.py
+from flask import Flask
+app = Flask(__name__)
+@app.route('/')
+def hello():
+    return 'Hello World'
+
+
+.\Procfile
+web: gunicorn hello:app --log-file=-
+
+git init
+git status
+git add Procfile hello.py requirements.txt
+git commit -m "init"
+heroku create
+git push heroku master
