@@ -38,7 +38,7 @@ def send_mail(username, password, from_addr, to_addrs, msg):
 email_list = [line.strip() for line in open('kontakt.txt')]
 
 # From adres email
-from_addr = 'automat@4gns.net'
+from_addr = 'example@gmail.com'
 
 for to_addrs in email_list:
     msg = MIMEMultipart()
