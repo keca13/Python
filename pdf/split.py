@@ -1,3 +1,5 @@
+#https://pythoninoffice.com/split-and-merge-pdf-using-python/
+
 from PyPDF4 import PdfFileReader, PdfFileWriter
 import sys
 #os.getcwd()
