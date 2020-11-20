@@ -11,12 +11,14 @@ cd learning_log
 #ni README.txt  #ni like touch in powershell
 
 python -m venv ll_env
+or
+C:\python37\python -m venv ll_env
 
 #To activate venv
 
 source ll_env/bin/activate # in UNIX system
 
-.\ll_env\Scripts\activate.ps1 # in windows powershell
+.\env37\Scripts\activate.ps1 # in windows powershell
 
 
 
