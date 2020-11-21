@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-import time, os
+import time, os, sys
+
+path_from = sys.argv[1]
 
 def readFromFile(*path_to_files):
     if path_to_files is not None:
@@ -29,10 +31,10 @@ if stage.startswith('PROD'):
     output = f"SERVER is in {stage} mode"
     print(output)
     exit()
-elif os.path.exists('./server.conf'):
-    readFromFile('./server.conf')
+elif os.path.exists(path_from):#kiedy plik istnieje
+    readFromFile(path_from)
 else:
-    writeToFile('./server.conf')
+    writeToFile(path_from)#kiedy plik nie istnieje
 
 stop_time = time.localtime()
 diffrence = time.mktime(stop_time) - time.mktime(start_time)
