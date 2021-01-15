@@ -3,10 +3,10 @@ from fabric.context_managers import *
 
 from pprint import pprint
 
-env.hosts = ['192.168.188.54']
+env.hosts = ['192.168.x.x']
 env.user = 'root'
-env.password = 'abcabcabc'
-env.port = '2123'
+env.password = 'password'
+env.port = 'port'
 
 
 def get_system_health():
